@@ -9,6 +9,6 @@ published: true
 meta: {}
 ---
 
-# Hello World
+## Hello World
 
 This is updated simply by dragging and dropping onto Github. 
