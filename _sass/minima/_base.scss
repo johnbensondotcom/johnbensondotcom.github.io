@@ -158,11 +158,13 @@ code {
 pre {
   padding: 8px 12px;
   overflow-x: auto;
+  background-color: #e0e0e0;
 
   > code {
     border: 0;
     padding-right: 0;
     padding-left: 0;
+    background-color: #e0e0e0;
   }
 }
 

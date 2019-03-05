@@ -1,11 +1,10 @@
 ---
 layout: page
-title: Understanding Forensic Images
+title: What is A Forensic Image?
 headline: Understanding what forensic images are and how they are created
-permalink: /about/
+permalink: /forensicimages01/
 ---
 
-## What is a Forensic Image?
 A forensic image is a bit-for-bit copy of a digital storage container. This copy includes both data that is accessible to the user (allocated space) and that may have been "deleted" by the user but not overwritten (unallocated space). Forensic images offer stability and flexibility to an investigator that can't be found with consumer like formats. Forensic images can be mounted so that a user can browse the contents of a hard drive as if they were the original user without changing volitile metadata. They can be used to recover lots of peices of evidence using specialized tools in conjunction with commerical or open source forensic utilities.
 
 ## File Formats
