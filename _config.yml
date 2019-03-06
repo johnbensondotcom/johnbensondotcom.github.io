@@ -34,6 +34,8 @@ excerpt_separator: <!--more-->
 show_excerpts: true
 kramdown:
       footnote_backlink: "&#8617;&#xfe0e;"
+      syntax_highlighter_opts:
+        disable: true
 
 # Pagination Options
 paginate: 5

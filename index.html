@@ -11,7 +11,7 @@ paginate: true
       <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
 
       <h2>
-        <a href="{% if post.link %}{{post.link}}{% else %}{{ post.url }}{% endif %}">{{ post.title }}</a>{% if post.link %}<span class="link-arrow"> &rarr;</span>{% endif %}
+        <a href="{% if post.link %}{{post.link}}{% else %}{{ post.url }}{% endif %}">{{ post.title }}</a>{% if post.link %}<span class="link-arrow"> &rArr;</span>{% endif %}
       </h2>
 
       {{ post.excerpt }}
