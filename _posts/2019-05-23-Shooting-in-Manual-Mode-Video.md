@@ -1,5 +1,6 @@
+---
 layout: post
-title: Security Checklist
+title: How to Nail Exposure Using Manual Mode
 categories:
 - Links
 - Photography
