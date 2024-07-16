@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title: Hosting Your Website with GitHub Pages  
 categories: [Jekyll]
 tags: []

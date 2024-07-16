@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title: Getting Into Keyboard Maestro
 categories: []
 tags: []

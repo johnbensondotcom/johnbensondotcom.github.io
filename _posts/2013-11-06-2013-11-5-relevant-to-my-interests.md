@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title: Relevant to my interests...
 categories: []
 tags: []

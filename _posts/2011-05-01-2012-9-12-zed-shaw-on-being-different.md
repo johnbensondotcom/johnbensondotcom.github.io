@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title: Zed Shaw on Being Different
 categories: []
 tags: []

@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title: Building Project Files with Sublime
 categories:
 - Technology

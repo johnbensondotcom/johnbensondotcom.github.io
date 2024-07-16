@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title: A Friendly Reminder to Back Your Data Up
 categories:
 - General

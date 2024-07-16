@@ -1,29 +1,31 @@
 ---
-layout: page
-title: About
+layout: single
+title: "About Me"
 permalink: /about/
+excerpt: "<br><br><br>"
+author_profile: true
+header:
+  overlay_image: /assets/images/about_banner.jpg
+
+
 ---
 
 I do [electronic discovery][1] and [digital forensics][2] at a law firm in Kansas City. After getting a finance degree from [Mizzou][3], I went to law school at [UMKC][4]. I helped start the first [hackerspace][5] outside of a big city and am a founding member of [SecKC][6]. 
 
 
-This site was put together using: 
+### About the Site
 
-* [Jekyll][7]
-* [Sublime Text][8]
-* GitHub
-* Google
-* [A fancy keyboard][9]
+I really had no aspirations to rebuild my website in 2024, but while working on building a place to house AI links I ended up throwing this together over the course of a few evenings. I started with the Minimal Mistakes Jekyll theme and started customizing the CSS with the help of Claude. 
 
----- 
-## Contact
+### Photos and Images
+
+Photos are all taken by me. I shoot with a Nikon Z6 II and do all my post production with Lightroom Classic. Images and icons were all generated using Claude to create scalable vector images using React. I couldn't code any react by hand if I had to. Computers are magic. 
+
+### Contact
 twitter: @john\_benson  
-email: john at john-benson dot com  
-You can also find me in the SecKC Slack
+email: john@john-benson.com
+You can also typically find me via the SecKC Discord server 
 
-
-
-Encrypted email is a horrible pain in the butt and not all that secure, but here's my PGP key anyway: 
 
 ```
 -----BEGIN PGP PUBLIC KEY BLOCK-----

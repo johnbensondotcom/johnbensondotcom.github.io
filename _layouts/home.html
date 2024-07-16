@@ -1,34 +1,61 @@
 ---
-layout: default
-paginate: true
+layout: archive
 ---
 
-<div class="home">
-  {%- if page.title -%}
-    <h1 class="page-heading">{{ page.title }}</h1>
-  {%- endif -%}
+{{ content }}
 
-  {{ content }}
+{% if page.featured_projects %}
+<h2>Featured Projects</h2>
+<div class="featured-projects-grid">
+  {% for project in page.featured_projects %}
+    {% assign project_page = site.pages | where: "permalink", project.url | first %}
+    {% if project_page %}
+      <div class="featured-project">
+        <div class="featured-project__image">
+          {% if project_page.header.teaser %}
+            <img src="{{ project_page.header.teaser | relative_url }}" alt="{{ project_page.title }}">
+          {% elsif project_page.header.image %}
+            <img src="{{ project_page.header.image | relative_url }}" alt="{{ project_page.title }}">
+          {% else %}
+            <img src="{{ '/assets/images/default-teaser.jpg' | relative_url }}" alt="{{ project_page.title }}">
+          {% endif %}
+        </div>
+        <div class="featured-project__content">
+          <h3 class="featured-project__title">
+            <a href="{{ project_page.url | relative_url }}">{{ project_page.title }}</a>
+          </h3>
+          {% if project_page.excerpt %}
+            <p class="featured-project__excerpt">{{ project_page.excerpt | strip_html | truncate: 160 }}</p>
+          {% endif %}
+        </div>
+      </div>
+    {% endif %}
+  {% endfor %}
+</div>
+{% endif %}
 
-
-  {%- if site.posts.size > 0 -%}
-    <ul class="post-list">
-      {%- for post in site.posts -%}
-      <li>
-        {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-        <span class="post-meta">{{ post.date | date: date_format }}</span>
-        <h1>
-        <a href="{% if post.link %}{{post.link}}{% else %}{{ post.url }}{% endif %}">{{ post.title }}</a>{% if post.link %}<span class="link-arrow"> &rarr;</span>{% endif %}
-
-        </h1>
-        {%- if site.show_excerpts -%}
-          {{ post.excerpt }}
-        {%- endif -%}
-      </li>
-      {%- endfor -%}
-    </ul>
-
-    <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p>
-  {%- endif -%}
-
+<h2>Recent Posts</h2>
+<div class="posts-list">
+  {% for post in site.posts limit:5 %}
+    <article class="post-item" itemscope itemtype="https://schema.org/CreativeWork">
+      <h3 class="post-item__title" itemprop="headline">
+        <a href="{{ post.url | relative_url }}" rel="permalink">{{ post.title }}</a>
+      </h3>
+      <div class="post-item__meta">
+        {% if post.date %}
+          <span class="post-item__date">
+            <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %d, %Y" }}</time>
+          </span>
+        {% endif %}
+        {% if post.last_modified_at %}
+          <span class="post-item__updated">
+            Updated: <time datetime="{{ post.last_modified_at | date_to_xmlschema }}">{{ post.last_modified_at | date: "%B %d, %Y" }}</time>
+          </span>
+        {% endif %}
+      </div>
+      {% if post.excerpt %}
+        <p class="post-item__excerpt" itemprop="description">{{ post.excerpt | strip_html | truncate: 160 }}</p>
+      {% endif %}
+    </article>
+  {% endfor %}
 </div>

@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title: TextMate and MultiMarkdown - The Definitive Guide
 categories: []
 tags: []

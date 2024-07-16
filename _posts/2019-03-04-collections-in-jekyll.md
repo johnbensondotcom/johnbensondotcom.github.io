@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title: Using Collections in Jekyll
 categories:
 - Links

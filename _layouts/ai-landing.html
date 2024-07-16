@@ -1,0 +1,43 @@
+---
+layout: archive
+---
+
+{{ content }}
+
+<h2>AI Resources</h2>
+<div class="ai-resources-grid">
+  {% for page in site.pages %}
+    {% if page.path contains '_ai/' and page.name != 'index.md' %}
+      {% unless page.path contains 'case-studies' or page.path contains 'prompts' %}
+        <div class="ai-grid-item">
+          <article class="archive__item">
+            {% if page.header.teaser %}
+              <div class="archive__item-teaser">
+                <img src="{{ page.header.teaser | relative_url }}" alt="">
+              </div>
+            {% else %}
+              <div class="archive__item-teaser">
+                <img src="{{ '/assets/images/default-teaser.jpg' | relative_url }}" alt="">
+              </div>
+            {% endif %}
+            <h3 class="archive__item-title">
+              <a href="{{ page.url | relative_url }}">{{ page.title }}</a>
+            </h3>
+            {% if page.excerpt %}
+              <div class="archive__item-excerpt">
+                {{ page.excerpt | markdownify | strip_html | truncate: 160 }}
+              </div>
+            {% endif %}
+          </article>
+        </div>
+      {% endunless %}
+    {% endif %}
+  {% endfor %}
+</div>
+
+<h2>Recent AI Blog Posts</h2>
+<div class="ai-blog-posts">
+  {% for post in site.tags.AI %}
+    {% include archive-single.html %}
+  {% endfor %}
+</div>

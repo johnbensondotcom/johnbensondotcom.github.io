@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title:  "Software Updates Everywhere"
 date:   2018-05-29 12:36:20 -0500
 categories: software 

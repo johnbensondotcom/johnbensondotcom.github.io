@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title: What's new in Apple File System - WWDC 2017
 categories:
 - Links

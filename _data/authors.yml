@@ -1,0 +1,9 @@
+John Benson:
+  avatar      : "/assets/images/headshot.jpg"
+  bio: "Lawyer, hacker, photogrpaher"
+  location: Kansas City, MO
+  email: john@john-benson.com
+  links:
+    - label: "Glass"
+      icon: "fas fa-camera"  # or any other suitable Font Awesome icon
+      url: "https://glass.photo/jur1st"

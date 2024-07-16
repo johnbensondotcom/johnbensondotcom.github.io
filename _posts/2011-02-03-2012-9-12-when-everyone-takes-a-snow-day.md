@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title: When Everyone Takes a Snow Day
 categories: []
 tags: []

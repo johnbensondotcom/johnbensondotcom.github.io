@@ -1,0 +1,46 @@
+---
+layout: archive
+---
+{{ content }}
+
+<div class="ai-case-studies">
+  {% for page in site.pages %}
+    {% if page.path contains '_ai/case-studies/' and page.name != 'index.md' %}
+      <article class="case-study" itemscope itemtype="https://schema.org/CreativeWork">
+        <h3 class="case-study__title" itemprop="headline">
+          <a href="{{ page.url | relative_url }}" rel="permalink">{{ page.title }}</a>
+        </h3>
+        <div class="case-study__meta">
+          {% if page.date %}
+            <span class="case-study__date">
+              Published: <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %d, %Y" }}</time>
+            </span>
+          {% endif %}
+          {% if page.last_updated_at %}
+            <span class="case-study__updated">
+              Updated: <time datetime="{{ page.last_updated_at | date_to_xmlschema }}">{{ page.last_updated_at | date: "%B %d, %Y" }}</time>
+            </span>
+          {% endif %}
+        </div>
+        {% if page.excerpt %}
+          <p class="case-study__excerpt" itemprop="description">{{ page.excerpt | strip_html | truncate: 160 }}</p>
+        {% endif %}
+        {% if page.tags %}
+          <div class="case-study__tags">
+            {% for tag in page.tags %}
+              <span class="case-study__tag">{{ tag }}</span>
+            {% endfor %}
+          </div>
+        {% endif %}
+      </article>
+    {% endif %}
+  {% endfor %}
+</div>
+<h2>Recent AI Case Study Blog Posts</h2>
+<div class="ai-blog-posts">
+  {% for post in site.posts %}
+    {% if post.tags contains "AI" and post.tags contains "Case Studies" %}
+      {% include archive-single.html %}
+    {% endif %}
+  {% endfor %}
+</div>

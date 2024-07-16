@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title: Introducing the Forensics Fundamentals Series
 categories:
 - Technology

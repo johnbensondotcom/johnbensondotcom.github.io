@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title: Forensic Fundamentals - Disc Images
 categories:
 - Forensics Fundamentals

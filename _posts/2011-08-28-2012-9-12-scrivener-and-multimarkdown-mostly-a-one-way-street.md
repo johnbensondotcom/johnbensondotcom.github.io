@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title: Scrivener and MultiMarkdown - Mostly a One Way Street
 categories: []
 tags: []

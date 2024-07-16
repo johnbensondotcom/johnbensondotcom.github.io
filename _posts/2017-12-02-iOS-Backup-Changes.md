@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title:  "You Can Now Reset an iOS iTunes Backup Encryption Password on an iOS device and That's Not Necessarily a Good Thing"
 date:   2017-12-02 22:36:20 -0500
 categories: forensics  

@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title: Oh My ZSH
 categories:
 - Links

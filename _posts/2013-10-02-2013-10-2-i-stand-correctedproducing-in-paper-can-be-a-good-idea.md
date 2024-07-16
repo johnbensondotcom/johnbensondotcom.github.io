@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title: I Stand Corrected..Producing In Paper Can Be A Good Idea
 categories: []
 tags: []

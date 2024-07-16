@@ -1,0 +1,152 @@
+---
+layout: single
+---
+
+{{ content }}
+
+<div id="ai-ethics-explorer">
+  <h1>AI in Legal Practice: Ethical Impacts Explorer</h1>
+  
+  <div class="controls">
+    <button class="tab active" onclick="showSection('opportunities')">Opportunities for Ethical Enhancement</button>
+    <button class="tab" onclick="showSection('risks')">Risks Introduced by AI</button>
+  </div>
+
+  <div id="opportunities" class="section">
+    <h2>Opportunities for Ethical Enhancement through AI</h2>
+    <div class="grid" id="opportunitiesGrid"></div>
+  </div>
+
+  <div id="risks" class="section" style="display:none;">
+    <h2>Risks Introduced by AI in Legal Practice</h2>
+    <div class="grid" id="risksGrid"></div>
+  </div>
+
+  <div class="pagination">
+    <a href="#" class="previous">Previous</a>
+    <a href="#" class="next">Next</a>
+  </div>
+</div>
+
+<script>
+const data = {
+    opportunities: [
+        {
+            title: "Enhanced Legal Research",
+            category: "ABA Rule 1.1: Competence",
+            description: "AI-powered tools can significantly improve the speed and depth of legal research.",
+            detail: "Advanced search algorithms and natural language understanding allow attorneys to quickly find relevant cases, statutes, and legal opinions, ensuring more comprehensive and up-to-date legal knowledge."
+        },
+        {
+            title: "Improved Case Analysis",
+            category: "ABA Rule 1.3: Diligence",
+            description: "AI can process and analyze large volumes of case documents more efficiently than human review alone.",
+            detail: "Machine learning algorithms can identify patterns and key information in vast document sets, helping lawyers to be more thorough in their case preparation and strategy development."
+        },
+        {
+            title: "Enhanced Client Counseling",
+            category: "ABA Rule 1.4: Communication",
+            description: "AI-driven insights can help lawyers provide more informed and timely advice to clients.",
+            detail: "By quickly analyzing relevant laws, precedents, and case specifics, AI tools enable lawyers to offer more comprehensive and up-to-date counsel, improving the quality of client communication."
+        },
+        {
+            title: "Efficient Document Review",
+            category: "ABA Rule 1.3: Diligence",
+            description: "AI-powered document review can significantly reduce time spent on routine tasks.",
+            detail: "Automated systems can quickly sort, categorize, and flag relevant documents, allowing lawyers to focus their attention on higher-level analysis and strategy."
+        },
+        {
+            title: "Predictive Case Outcomes",
+            category: "ABA Rule 2.1: Advisor",
+            description: "AI models can analyze historical case data to predict potential outcomes.",
+            detail: "By assessing factors from similar past cases, AI can provide valuable insights into likely outcomes, helping lawyers to better advise clients and develop effective strategies."
+        },
+        {
+            title: "Automated Compliance Monitoring",
+            category: "ABA Rule 1.1: Competence",
+            description: "AI systems can help ensure ongoing compliance with changing laws and regulations.",
+            detail: "By continuously monitoring legal updates and comparing them to client operations, AI can alert lawyers to potential compliance issues, enhancing their ability to provide competent representation."
+        }
+    ],
+    risks: [
+        {
+            title: "Over-Reliance on AI Recommendations",
+            category: "ABA Rule 1.1: Competence",
+            description: "Excessive trust in AI outputs may lead to a decline in independent legal reasoning.",
+            detail: "Lawyers might become too dependent on AI-generated analyses or recommendations, potentially compromising their ability to exercise independent judgment and critical thinking."
+        },
+        {
+            title: "Data Privacy and Confidentiality Concerns",
+            category: "ABA Rule 1.6: Confidentiality",
+            description: "Use of AI tools may inadvertently expose sensitive client information.",
+            detail: "Sharing client data with third-party AI services or storing information in cloud-based systems could potentially lead to unauthorized access or breaches of client confidentiality."
+        },
+        {
+            title: "Algorithmic Bias in Legal Analysis",
+            category: "ABA Rule 8.4: Misconduct",
+            description: "AI systems may perpetuate or amplify existing biases in legal decision-making.",
+            detail: "If trained on historically biased data, AI models might produce recommendations that discriminate against certain groups, potentially leading to unfair legal outcomes."
+        },
+        {
+            title: "Erosion of Core Legal Skills",
+            category: "ABA Rule 1.1: Competence",
+            description: "Overuse of AI tools may lead to atrophy of fundamental legal research and analysis skills.",
+            detail: "As lawyers increasingly rely on AI for tasks like legal research and document review, there's a risk of losing proficiency in these essential skills, potentially impacting overall legal competence."
+        },
+        {
+            title: "Challenges in AI-Assisted Decision Making",
+            category: "ABA Rule 2.1: Advisor",
+            description: "Difficulty in explaining AI-driven recommendations may compromise transparent client advising.",
+            detail: "The complexity of AI algorithms can make it challenging for lawyers to fully understand and explain the rationale behind AI-generated insights, potentially affecting the quality and transparency of client counsel."
+        },
+        {
+            title: "Ethical Use of Client Data",
+            category: "ABA Rule 1.6: Confidentiality",
+            description: "Using client data to train AI models raises ethical and privacy concerns.",
+            detail: "The use of confidential client information to improve AI systems, even if anonymized, may violate ethical obligations and client trust if not carefully managed and disclosed."
+        }
+    ]
+};
+
+function createCard(item) {
+    return `
+        <div class="card">
+            <h3>${item.title}</h3>
+            <p class="category">${item.category}</p>
+            <p>${item.description}</p>
+            <button class="btn" onclick="toggleDetail(this)">Learn more</button>
+            <div class="detail">
+                <p>${item.detail}</p>
+            </div>
+        </div>
+    `;
+}
+
+function toggleDetail(btn) {
+    const card = btn.closest('.card');
+    const detail = card.querySelector('.detail');
+    const isExpanded = detail.style.display === 'block';
+    
+    detail.style.display = isExpanded ? 'none' : 'block';
+    btn.textContent = isExpanded ? 'Learn more' : 'Show less';
+}
+
+function showSection(section) {
+    document.querySelectorAll('.section').forEach(s => s.style.display = 'none');
+    document.getElementById(section).style.display = 'block';
+    document.querySelectorAll('.tab').forEach(tab => tab.classList.remove('active'));
+    document.querySelector(`.tab[onclick="showSection('${section}')"]`).classList.add('active');
+}
+
+function initializeSection(section) {
+    const grid = document.getElementById(`${section}Grid`);
+    data[section].forEach(item => {
+        grid.innerHTML += createCard(item);
+    });
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    initializeSection('opportunities');
+    initializeSection('risks');
+});
+</script>

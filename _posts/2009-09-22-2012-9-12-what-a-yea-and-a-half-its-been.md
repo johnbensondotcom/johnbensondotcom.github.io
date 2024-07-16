@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title: What a Yea (and a Half) It's Been
 categories: []
 tags: []

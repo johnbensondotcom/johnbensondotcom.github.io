@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title: Using Grep to Work With Text
 categories: []
 tags: []

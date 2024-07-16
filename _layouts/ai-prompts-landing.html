@@ -1,0 +1,55 @@
+---
+layout: archive
+---
+{{ content }}
+<h2>AI Prompts</h2>
+<div class="ai-prompts">
+  {% for page in site.pages %}
+  {% if page.path contains '_ai/prompts/' and page.name != 'index.md' %}
+    <article class="prompt" itemscope itemtype="https://schema.org/CreativeWork">
+      <h3 class="prompt__title" itemprop="headline">
+        <a href="{{ page.url | relative_url }}" rel="permalink">{{ page.title }}</a>
+      </h3>
+      <div class="prompt__meta">
+        {% if page.date %}
+          <p class="prompt__date"><i class="fas fa-calendar-alt" aria-hidden="true"></i> Created: {{ page.date | date: "%B %d, %Y" }}</p>
+        {% endif %}
+        {% if page.last_modified_at %}
+          <p class="prompt__updated"><i class="fas fa-sync-alt" aria-hidden="true"></i> Updated: {{ page.last_modified_at | date: "%B %d, %Y" }}</p>
+        {% endif %}
+        {% if page.prompt_type %}
+          <p class="prompt__type"><i class="fas fa-tag" aria-hidden="true"></i> Type: {{ page.prompt_type }}</p>
+        {% endif %}
+        {% if page.tier %}
+          <p class="prompt__tier"><i class="fas fa-layer-group" aria-hidden="true"></i> Tier: {{ page.tier }}</p>
+        {% endif %}
+      </div>
+      {% if page.use_case %}
+        <p class="prompt__use-case"><i class="fas fa-briefcase" aria-hidden="true"></i> Use Case: {{ page.use_case }}</p>
+      {% endif %}
+      {% if page.excerpt %}
+        <p class="prompt__excerpt" itemprop="description">{{ page.excerpt | strip_html | truncate: 160 }}</p>
+      {% endif %}
+      {% if page.ai_model %}
+        <div class="prompt__models">
+          <i class="fas fa-robot" aria-hidden="true"></i> AI Model(s):
+          <ul class="ai-model-list">
+            {% assign models = page.ai_model | split: "," %}
+            {% for model in models %}
+              <li>{{ model | strip }}</li>
+            {% endfor %}
+          </ul>
+        </div>
+      {% endif %}
+    </article>
+  {% endif %}
+  {% endfor %}
+</div>
+<h2>Recent AI Prompts Blog Posts</h2>
+<div class="ai-blog-posts">
+  {% for post in site.posts %}
+  {% if post.tags contains "AI" and post.tags contains "Prompts" %}
+  {% include archive-single.html %}
+  {% endif %}
+  {% endfor %}
+</div>

@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title: And we're back...
 categories:
 - Posts

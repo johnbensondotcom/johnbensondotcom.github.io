@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title: TextExpander for Lawyers - Sending Email to Clients
 categories: []
 tags: []

@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title: Thing of the Week - Learn Python the Hard Way
 categories: []
 tags: []

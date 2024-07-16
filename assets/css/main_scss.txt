@@ -1,0 +1,112 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+search: false
+---
+
+@charset "utf-8";
+
+// Import Google Font
+@import url('https://fonts.googleapis.com/css2?family=Benne&display=swap');
+
+// Define custom properties before imports
+$serif      : 'Benne', Georgia, Times, serif;
+$sans-serif : 'Benne', -apple-system, BlinkMacSystemFont, 'Roboto', 'Segoe UI', 'Helvetica Neue', 'Lucida Grande', Arial, sans-serif;
+$monospace  : Monaco, Consolas, 'Lucida Console', monospace;
+
+$global-font-family : $serif;
+$header-font-family : $sans-serif;
+$link-color: #8B0000;
+$footer-background-color: #f8f8f8; // Adjust this color to match your site’s background color
+
+// Increase the site title size by 25%
+$type-size-3: 1.953em !default; // Assuming this is the size used for the site title
+
+@import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
+@import "minimal-mistakes"; // main partials
+
+body {
+  font-family: 'Benne', Palatino, 'Palatino Linotype', 'Palatino LT STD', 'Book Antiqua', Georgia, serif;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.page__content {
+  font-size: 1em;
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: normal;
+    margin-top: 2.1em;
+    margin-bottom: 1.4em;
+  }
+  h1 { font-size: 2.2em; }
+  h2 { font-size: 1.7em; }
+  h3 { font-size: 1.3em; }
+  .page__title {
+    font-size: 2.5em;
+    margin-bottom: 0.5em;
+  }
+}
+
+.author__avatar {
+  max-width: 110px;
+  border-radius: 50%;
+  opacity: 1; /* Ensure full opacity */
+  transition: none; /* Remove any transition effects */
+}
+
+.highlight {
+  font-size: 0.9em;
+}
+
+.page__meta {
+  font-size: 0.8em;
+  color: #666;
+}
+
+.pagination {
+  font-size: 0.9em;
+}
+
+/* Ensure that the text in recent posts is not cut off */
+.archive__item {
+  margin-top: 1em; /* Adjust margin as needed */
+  margin-bottom: 1em; /* Adjust margin as needed */
+}
+
+.archive__item-title, .archive__item-excerpt {
+  line-height: 1.5; /* Increase line height */
+  padding-top: 0.2em; /* Add padding to the top */
+  padding-bottom: 0.2em; /* Add padding to the bottom */
+  margin-top: 0.2em; /* Adjust margin to the top */
+  margin-bottom: 0.2em; /* Adjust margin to the bottom */
+}
+
+/* Additional specific adjustments */
+.archive__item-meta {
+  line-height: 1.5; /* Ensure meta information is not cut off */
+  margin-top: 0.25em; /* Add smaller margin to the top */
+  margin-bottom: 0.25em; /* Add smaller margin to the bottom */
+}
+
+// Additional custom styles for links
+a {
+  color: $link-color;
+}
+
+a:hover,
+a:focus {
+  color: darken($link-color, 10%);
+}
+
+// Ensure footer is full width but content is centered and background color is consistent
+.page__footer {
+  width: 100%;
+  background-color: $footer-background-color; /* Set the footer background color */
+  border-top: 1px solid #ccc; /* Horizontal line to delineate the footer */
+  padding-top: 1em; /* Add some padding above the footer content */
+  
+  footer {
+    max-width: $max-width;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

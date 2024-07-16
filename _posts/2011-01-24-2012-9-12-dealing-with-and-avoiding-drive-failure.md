@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title: Dealing With and Avoiding Drive Failure
 categories: []
 tags: []

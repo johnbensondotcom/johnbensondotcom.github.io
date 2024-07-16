@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title: The Cowtown Computer Congress - A Kansas City Hackerspace
 categories: []
 tags: []

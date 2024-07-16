@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title: Using Bootcamp to Take Law School Exams
 categories: []
 tags: []
