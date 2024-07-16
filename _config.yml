@@ -28,7 +28,7 @@ github_username:  jur1st
 
 
 # Build settings
-theme: minimal-mistakes-jekyll
+remote_theme: "mmistakes/minimal-mistakes@4.24.0"
 minimal_mistakes_skin: "dirt" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 sass:
   sass_dir: _sass
@@ -44,7 +44,6 @@ plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
   - jekyll-paginate
-  - jekyll-include-cache
   - jekyll-remote-theme
 
 # Exclude from processing.
