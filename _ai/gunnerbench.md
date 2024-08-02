@@ -2,12 +2,20 @@
 layout: single
 title: "GunnerBench"
 permalink: /ai/gunnerbench/
+author: "John Benson"
+author_profile: true
+toc: true
+toc_label: false
+toc_sticky: true
+classes: default
 excerpt: "A benchmark for comparing the capabilities of language models to assist and work in the legal domain"
 header:
   teaser: "/assets/images/gb_teaser.jpg"
 ---
 
 GunnerBench is a novel benchmark system designed to evaluate the performance of large language models (LLMs) in legal applications. Unlike existing benchmarks that focus on academic metrics or general capabilities, GunnerBench adopts a practical, task-oriented approach inspired by capture-the-flag competitions.  By providing a clear scoring and tiering system, GunnerBench aims to empower legal professionals to make informed decisions about AI tool selection and implementation.
+
+I'm keeping all of the [results, discussions, and the leaderboards over on my Notion instance.](https://field-fall-b93.notion.site/GunnerBench-3e0fe64fb8714eb383b03f620f9dd6e6) 
 
 ## Introduction
 

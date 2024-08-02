@@ -8,6 +8,8 @@ toc_label: false
 toc_sticky: true
 author_profile: true
 classes: default
+header:
+  teaser: "/assets/images/resources_teaser.jpg"
 ---
 
 # Toolkit

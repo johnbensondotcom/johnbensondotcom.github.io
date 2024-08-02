@@ -8,7 +8,7 @@ header:
     image: /assets/images/banner.jpg
 featured_projects:
   - url: "/ai/ethics/"
-  - url: "/ai/case-studies/doc-review-cot/"
+  - url: "/ai/gunnerbench/"
   - url: "/ai/ethics-explorer/"
 ---
 
