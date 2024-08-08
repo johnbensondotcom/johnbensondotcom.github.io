@@ -13,10 +13,12 @@ featured_projects:
 ---
 
 
-Hey there! I'm John, a lawyer with a lifelong obsession for pushing the boundaries of tech. For the past 15 years, I've been leveraging cutting-edge technologies to drive better outcomes in complex legal matters. From conducting hundreds forensics investigations to deploying AI in high-stakes eDiscovery cases, I thrive on finding innovative solutions to thorny problems.
+Hey there! I'm John, a lawyer who's been pushing the boundaries of tech since I first laid hands on a computer. I became a lawyer because I've always been curious and love learning new things, and technology, like the law, offers boundless opportunities to do just that. For the past 15 years, I've leveraged cutting-edge tools to drive better outcomes in complex legal matters, from conducting forensic investigations to deploying AI in high-stakes eDiscovery cases. My true calling lies in finding innovative solutions to the thorniest problems and answering the most ambiguous questions.
 
-Now, I'm diving deep into the world of language models and other AI tools, exploring their potential to reshape the legal landscape. I believe we're on the cusp of a revolution in how legal services are delivered, and I'm excited to be at the forefront of this transformation. This wave is coming for us all regardless of how prepared we are or how comfortable we'll be. The only way to learn to swim is to get wet, and the only way to not be crushed by the AI wave is through experimentation and practice. 
+Currently, I'm exploring language models and other AI tools, and their potential to reshape the legal landscape. We're on the brink of a game-changing shift in how legal services are delivered, and I'm thrilled to be at the forefront of this transformation.
 
-So consider this our digital playground, where I'll share my explorations, hacks, and links and whatever else catches my eye. If you're the kind of person who's  interested in pushing limits while figuring out what our boundaries are, pull up a chair and join the conversation. Together, we'll chart a course through all of this and have a hell of a good time doing it.
+This wave is coming for us all, whether we're ready or not. The only way to learn to swim is to get wet, and the only way to avoid being crushed by the AI tidal wave is to dive in headfirst and start experimenting.
+
+Consider this our digital sandbox, where I'll share my explorations, hacks, links, and whatever else captures my attention. If you're the kind of person who enjoys pushing limits and figuring out where the boundaries lie, pull up a chair and let's chat. Together, we'll navigate this uncharted territory and have a blast while we're at it.
 
 ---
