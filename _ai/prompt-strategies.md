@@ -2,7 +2,7 @@
 layout: single
 author: John Benson
 title: "Prompting Techniques"
-excerpt: "An interactive exploration of the ethical risks and benefits of AI under the ABA model rules"
+excerpt: "A collection of prompting techniques which improve LLM output"
 permalink: /ai/prompt-strategy/
 classes: wide
 previous_next_links: false

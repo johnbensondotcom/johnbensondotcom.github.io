@@ -52,10 +52,30 @@ body {
   h1 { font-size: 2.2em; }
   h2 { font-size: 1.7em; }
   h3 { font-size: 1.3em; }
-  .page__title {
-    font-size: 2.5em;
+.page__title {
+    font-size: 3em;
     margin-bottom: 0.5em;
+    color: #8B0000;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+    border-bottom: 2px solid #8B0000;
+    padding-bottom: 0.2em;
   }
+}
+.archive__item-title {
+  font-size: 2.5em;
+  color: #8B0000;
+  font-weight: bold;
+  margin-bottom: 0.5em;
+}
+
+.archive__item-title a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.archive__item-title a:hover {
+  text-decoration: underline;
 }
 
 // Author avatar styles
@@ -108,7 +128,7 @@ a {
 // Site title styles
 .site-title {
   font-family: $serif;
-  font-size: 2em;
+  font-size: 2.9em;
 }
 
 // Ensure all headings use Benne
